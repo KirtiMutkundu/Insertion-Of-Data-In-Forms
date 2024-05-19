@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>DISPLAYING WEBPAGE TABLE</h1>
+        <table border="3px">
+            <tr>
+                <th>id</th>
+                <th>Topic Name</th>
+                <th>Name</th>
+                <th>URL</th>
+                <th>Email</th>
+            </tr>
+            {% for to in WOS %}
+            <tr>
+                <td>{{to.id}}</td>
+                <td>{{to.topic_name}}</td>
+                <td>{{to.name}}</td>
+                <td>{{to.url}}</td>
+                <td>{{to.email}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
